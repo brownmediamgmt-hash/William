@@ -1,0 +1,1093 @@
+[
+  {
+    "slug": "golden-pothos",
+    "commonName": "Pothos",
+    "aliases": ["Golden Pothos", "Devil's Ivy", "Marble Queen Pothos", "Epipremnum"],
+    "scientificName": "Epipremnum aureum",
+    "family": "Araceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright, indirect light is ideal. Tolerates low light but growth slows and variegated leaves may turn solid green.",
+    "water": "Let the top 1-2 in (2-5 cm) of soil dry out between waterings. Water thoroughly until it drains, then empty the saucer. Cut back in winter.",
+    "soil": "Well-draining, peat-based potting mix; add perlite for extra drainage.",
+    "humidity": "Tolerates average household humidity (40-50%).",
+    "temperature": "65-85°F (18-29°C); protect from below 50°F (10°C).",
+    "fertilizer": "Balanced liquid fertilizer monthly in spring/summer; skip in winter.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "Small white cottony clumps in leaf joints and on stems.", "treatment": "Dab with rubbing alcohol on a cotton swab, then treat weekly with insecticidal soap or neem oil until clear."},
+      {"name": "Spider mites", "symptoms": "Fine webbing and pale stippled speckling on leaves, worse in dry air.", "treatment": "Rinse foliage, raise humidity, and apply insecticidal soap or neem oil every 5-7 days."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves with wet, soggy soil", "cause": "Overwatering / root rot", "fix": "Let soil dry out fully, inspect roots for brown mushy sections and trim them, repot into fresh well-draining mix, and water less often."},
+      {"symptom": "Brown, crispy leaf edges", "cause": "Underwatering or low humidity", "fix": "Water more consistently, check soil weekly, and consider a humidity tray or occasional misting."},
+      {"symptom": "Long bare vines with sparse leaves", "cause": "Insufficient light", "fix": "Move to brighter indirect light and prune leggy vines to encourage bushier growth."},
+      {"symptom": "Variegated leaves turning solid green", "cause": "Not enough light", "fix": "Relocate to a brighter spot; variegation needs stronger light to maintain."}
+    ]
+  },
+  {
+    "slug": "monstera-deliciosa",
+    "commonName": "Monstera",
+    "aliases": ["Swiss Cheese Plant", "Split-Leaf Philodendron"],
+    "scientificName": "Monstera deliciosa",
+    "family": "Araceae",
+    "difficulty": "Easy-Moderate",
+    "toxicToPets": true,
+    "light": "Bright, indirect light. Direct sun scorches leaves; too little light means new leaves won't split (fenestrate).",
+    "water": "Water when the top 1-2 in of soil is dry, roughly every 1-2 weeks. Reduce in winter.",
+    "soil": "Chunky, well-draining aroid mix (potting soil + bark + perlite).",
+    "humidity": "Prefers 50-60% humidity but adapts to average indoor air.",
+    "temperature": "65-85°F (18-29°C).",
+    "fertilizer": "Balanced liquid fertilizer every 4-6 weeks in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Tiny yellow speckles and fine webbing on leaf undersides.", "treatment": "Wipe leaves down, increase humidity, treat with insecticidal soap or neem oil."},
+      {"name": "Scale", "symptoms": "Small brown/tan bumps stuck to stems or leaf veins, sticky residue nearby.", "treatment": "Scrape off with a fingernail or soft brush, then apply horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Yellowing lower leaves, soil stays wet", "cause": "Overwatering", "fix": "Let the soil dry more between waterings and ensure the pot has drainage holes."},
+      {"symptom": "New leaves emerge small with no splits/holes", "cause": "Insufficient light or plant is still young/juvenile", "fix": "Move to brighter indirect light; fenestration increases with plant maturity and light."},
+      {"symptom": "Brown crispy patches with yellow halo", "cause": "Sunburn from direct sunlight", "fix": "Move out of direct sun into bright indirect light; damaged leaf tissue won't recover but new growth will be fine."},
+      {"symptom": "Curling leaves and dry soil", "cause": "Underwatering", "fix": "Water thoroughly and check soil moisture weekly; provide a moss pole for climbing support."}
+    ]
+  },
+  {
+    "slug": "snake-plant",
+    "commonName": "Snake Plant",
+    "aliases": ["Dracaena trifasciata", "Sansevieria", "Mother-in-Law's Tongue"],
+    "scientificName": "Dracaena trifasciata",
+    "family": "Asparagaceae",
+    "difficulty": "Very Easy",
+    "toxicToPets": true,
+    "light": "Extremely adaptable: low light to bright indirect light; tolerates some direct sun.",
+    "water": "Let soil dry completely between waterings (every 2-6 weeks depending on light/season). The #1 killer is overwatering.",
+    "soil": "Fast-draining cactus/succulent mix.",
+    "humidity": "Tolerates dry air well; no misting needed.",
+    "temperature": "60-85°F (15-29°C); avoid below 50°F (10°C).",
+    "fertilizer": "Light feeding with cactus fertilizer 2-3 times during summer.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony residue at leaf base.", "treatment": "Remove with alcohol-dipped swab, follow up with insecticidal soap."},
+      {"name": "Spider mites", "symptoms": "Fine speckling and webbing, usually in very dry conditions.", "treatment": "Wipe leaves and apply neem oil if infestation persists."}
+    ],
+    "issues": [
+      {"symptom": "Mushy, yellow or translucent leaves near the base", "cause": "Overwatering / root or crown rot", "fix": "Stop watering immediately, remove affected leaves, unpot to check roots, repot in dry fast-draining mix if roots are salvageable."},
+      {"symptom": "Wrinkled, curling leaves", "cause": "Underwatering (rare, but happens after long neglect)", "fix": "Water thoroughly and resume a light watering schedule."},
+      {"symptom": "Leaves flopping over instead of standing upright", "cause": "Too little light or an overly large/wet pot", "fix": "Move to brighter light and size down the pot if roots don't fill it."}
+    ]
+  },
+  {
+    "slug": "zz-plant",
+    "commonName": "ZZ Plant",
+    "aliases": ["Zanzibar Gem", "Zamioculcas"],
+    "scientificName": "Zamioculcas zamiifolia",
+    "family": "Araceae",
+    "difficulty": "Very Easy",
+    "toxicToPets": true,
+    "light": "Low to bright indirect light; very tolerant of low-light rooms.",
+    "water": "Let soil dry out fully between waterings, roughly every 2-3 weeks. Rhizomes store water like a succulent.",
+    "soil": "Well-draining potting mix with perlite.",
+    "humidity": "Average household humidity is fine.",
+    "temperature": "65-79°F (18-26°C).",
+    "fertilizer": "Balanced liquid fertilizer 2-3 times during growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Rare, but fine webbing/speckling in very dry air.", "treatment": "Wipe leaves and treat with insecticidal soap if seen."}
+    ],
+    "issues": [
+      {"symptom": "Yellowing stalks that feel soft or mushy at the base", "cause": "Overwatering / rhizome rot", "fix": "Stop watering, unpot and inspect rhizomes, cut away any mushy black sections, repot in fresh dry mix."},
+      {"symptom": "Slow or no new growth", "cause": "Normal seasonal dormancy or too little light", "fix": "Expect slower growth in winter; move to brighter indirect light if it's been stagnant for months."},
+      {"symptom": "Leaflets dropping off stems", "cause": "Underwatering, cold drafts, or being moved/bumped", "fix": "Resume regular watering and keep away from cold drafts or heating vents."}
+    ]
+  },
+  {
+    "slug": "peace-lily",
+    "commonName": "Peace Lily",
+    "aliases": ["Spathiphyllum"],
+    "scientificName": "Spathiphyllum wallisii",
+    "family": "Araceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Low to bright indirect light; avoid direct sun which scorches leaves and fades white blooms.",
+    "water": "Keep soil evenly moist but not soggy; the plant dramatically droops when thirsty, which is a helpful watering cue, but don't let it wilt repeatedly.",
+    "soil": "Rich, well-draining potting mix that retains some moisture.",
+    "humidity": "Prefers high humidity (50%+); brown tips often mean air is too dry.",
+    "temperature": "65-80°F (18-27°C); no cold drafts.",
+    "fertilizer": "Balanced liquid fertilizer monthly in spring/summer at half strength.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clumps in leaf axils.", "treatment": "Wipe with alcohol swab and treat with insecticidal soap."},
+      {"name": "Spider mites", "symptoms": "Fine webbing and stippling, worse in dry heated rooms.", "treatment": "Increase humidity and rinse foliage; use neem oil for persistent infestations."}
+    ],
+    "issues": [
+      {"symptom": "Leaves droop dramatically but perk up after watering", "cause": "Normal thirst signal (underwatered)", "fix": "Water on a more consistent schedule before it fully wilts; check soil every few days."},
+      {"symptom": "Yellow leaves with consistently wet soil", "cause": "Overwatering / root rot", "fix": "Let soil dry more between waterings and ensure good drainage; trim mushy roots if repotting."},
+      {"symptom": "Brown, crispy leaf tips", "cause": "Low humidity, tap water minerals, or fertilizer buildup", "fix": "Raise humidity, use filtered/distilled water, and flush soil occasionally to clear mineral buildup."},
+      {"symptom": "No white flowers", "cause": "Insufficient light", "fix": "Move to brighter indirect light; peace lilies bloom best with more light."}
+    ]
+  },
+  {
+    "slug": "fiddle-leaf-fig",
+    "commonName": "Fiddle Leaf Fig",
+    "aliases": ["Ficus Lyrata"],
+    "scientificName": "Ficus lyrata",
+    "family": "Moraceae",
+    "difficulty": "Moderate-Hard",
+    "toxicToPets": true,
+    "light": "Bright indirect light with some gentle direct morning sun; low light causes leaf drop.",
+    "water": "Water when the top 2 in of soil is dry, usually weekly; keep a consistent schedule as this plant dislikes change.",
+    "soil": "Well-draining, chunky potting mix.",
+    "humidity": "Prefers 40-60% humidity.",
+    "temperature": "65-75°F (18-24°C); hates cold drafts and sudden temperature swings.",
+    "fertilizer": "Balanced liquid fertilizer monthly during spring/summer.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Speckled leaves with fine webbing.", "treatment": "Wipe leaves regularly, raise humidity, treat with insecticidal soap."},
+      {"name": "Scale", "symptoms": "Brown bumps on stems/leaf undersides with sticky honeydew.", "treatment": "Scrape off and treat with horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Brown spots with yellow halo scattered across leaves", "cause": "Bacterial or fungal leaf spot, often from overwatering or wet leaves", "fix": "Remove affected leaves, avoid getting foliage wet when watering, let soil dry more between waterings, improve air circulation."},
+      {"symptom": "Sudden leaf drop", "cause": "Shock from relocation, cold draft, overwatering, or underwatering", "fix": "Keep the plant in a stable spot with consistent light/temperature and a regular watering routine; avoid moving it unnecessarily."},
+      {"symptom": "Dark brown patches near leaf edges/veins", "cause": "Overwatering / root stress", "fix": "Check drainage, let soil dry out more, and repot if roots are waterlogged."},
+      {"symptom": "New leaves are small and pale", "cause": "Insufficient light or nutrients", "fix": "Move closer to a bright window and resume regular feeding in growing season."}
+    ]
+  },
+  {
+    "slug": "rubber-plant",
+    "commonName": "Rubber Plant",
+    "aliases": ["Ficus Elastica", "Rubber Tree"],
+    "scientificName": "Ficus elastica",
+    "family": "Moraceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright indirect light; tolerates medium light but leaves lose vibrancy.",
+    "water": "Let the top 1-2 in of soil dry out between waterings.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Average household humidity is fine.",
+    "temperature": "60-80°F (15-27°C).",
+    "fertilizer": "Balanced liquid fertilizer monthly in spring/summer.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing and stippled leaves.", "treatment": "Wipe leaves down and treat with insecticidal soap."},
+      {"name": "Scale", "symptoms": "Brown bumps along stems, sticky leaves.", "treatment": "Scrape off and apply horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves dropping from the bottom", "cause": "Overwatering", "fix": "Let soil dry out more between waterings and check for drainage."},
+      {"symptom": "Brown, curled leaf edges", "cause": "Underwatering or low humidity", "fix": "Water more consistently and mist occasionally."},
+      {"symptom": "Leggy growth with large gaps between leaves", "cause": "Insufficient light", "fix": "Move to a brighter spot; prune to encourage branching."}
+    ]
+  },
+  {
+    "slug": "heartleaf-philodendron",
+    "commonName": "Heartleaf Philodendron",
+    "aliases": ["Philodendron Hederaceum", "Philodendron Scandens"],
+    "scientificName": "Philodendron hederaceum",
+    "family": "Araceae",
+    "difficulty": "Very Easy",
+    "toxicToPets": true,
+    "light": "Medium to bright indirect light; tolerates low light.",
+    "water": "Let the top 1-2 in of soil dry between waterings.",
+    "soil": "Well-draining potting mix with perlite.",
+    "humidity": "Adapts to average humidity.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at leaf joints.", "treatment": "Remove with alcohol swab and follow with insecticidal soap."},
+      {"name": "Aphids", "symptoms": "Small green/black insects clustered on new growth, sticky residue.", "treatment": "Rinse off with water and apply insecticidal soap weekly."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering", "fix": "Let soil dry out more between waterings."},
+      {"symptom": "Small leaves and long thin stems", "cause": "Insufficient light", "fix": "Move to brighter indirect light and pinch back vines to encourage fullness."},
+      {"symptom": "Brown leaf edges", "cause": "Underwatering or low humidity", "fix": "Water more regularly and increase humidity slightly."}
+    ]
+  },
+  {
+    "slug": "spider-plant",
+    "commonName": "Spider Plant",
+    "aliases": ["Chlorophytum Comosum", "Airplane Plant"],
+    "scientificName": "Chlorophytum comosum",
+    "family": "Asparagaceae",
+    "difficulty": "Very Easy",
+    "toxicToPets": false,
+    "light": "Bright indirect light; tolerates medium light.",
+    "water": "Keep soil lightly moist; let the top inch dry between waterings.",
+    "soil": "Well-draining, general-purpose potting mix.",
+    "humidity": "Tolerates average humidity but appreciates more.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine speckling and webbing on leaves.", "treatment": "Rinse leaves and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Brown tips on leaves", "cause": "Fluoride/chlorine in tap water, low humidity, or fertilizer buildup", "fix": "Use filtered or distilled water, trim brown tips, and flush soil occasionally."},
+      {"symptom": "Pale, washed-out leaves", "cause": "Too much direct sun", "fix": "Move out of direct sunlight into bright indirect light."},
+      {"symptom": "Few or no baby plantlets ('spiderettes')", "cause": "Immature plant, insufficient light, or plant isn't yet rootbound", "fix": "Be patient, provide bright indirect light; plantlets form more readily once the plant is slightly rootbound."}
+    ]
+  },
+  {
+    "slug": "aloe-vera",
+    "commonName": "Aloe Vera",
+    "aliases": ["Aloe"],
+    "scientificName": "Aloe vera",
+    "family": "Asphodelaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright light, including several hours of direct sun; leggy growth means not enough light.",
+    "water": "Deep but infrequent watering; let soil dry out completely between waterings (every 3+ weeks).",
+    "soil": "Fast-draining cactus/succulent mix.",
+    "humidity": "Prefers dry air; avoid high humidity.",
+    "temperature": "55-80°F (13-27°C); protect from frost.",
+    "fertilizer": "Diluted cactus fertilizer once or twice in summer; rarely needed.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony spots at leaf base.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Mushy, translucent brown leaves", "cause": "Overwatering / root rot", "fix": "Stop watering, unpot to check roots, trim rot, repot in dry succulent mix and resume sparse watering."},
+      {"symptom": "Thin, curling, wrinkled leaves", "cause": "Underwatering", "fix": "Water deeply and resume a regular sparse watering schedule."},
+      {"symptom": "Leaves stretching and leaning toward a window", "cause": "Insufficient light", "fix": "Move to a spot with more direct sun, rotating occasionally for even growth."},
+      {"symptom": "Brown/reddish leaf tint", "cause": "Sun stress (often harmless, a natural stress response) or cold temperatures", "fix": "Usually cosmetic; ease into more sun gradually and protect from cold."}
+    ]
+  },
+  {
+    "slug": "string-of-pearls",
+    "commonName": "String of Pearls",
+    "aliases": ["Curio Rowleyanus", "Senecio Rowleyanus"],
+    "scientificName": "Curio rowleyanus",
+    "family": "Asteraceae",
+    "difficulty": "Moderate",
+    "toxicToPets": true,
+    "light": "Bright light with some direct sun (morning sun best).",
+    "water": "Let soil dry completely between waterings; water sparingly, more in summer, very little in winter.",
+    "soil": "Fast-draining succulent/cactus mix.",
+    "humidity": "Prefers dry air.",
+    "temperature": "65-80°F (18-27°C); avoid below 50°F (10°C).",
+    "fertilizer": "Diluted succulent fertilizer once or twice in summer.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony spots among the pearls.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Shriveled, deflated pearls", "cause": "Underwatering", "fix": "Water thoroughly and check soil moisture more regularly."},
+      {"symptom": "Mushy, translucent, discolored pearls", "cause": "Overwatering / rot", "fix": "Stop watering, remove rotten strands, let soil dry fully, repot into fast-draining mix."},
+      {"symptom": "Sparse, stretched-out strands with gaps", "cause": "Insufficient light", "fix": "Move to a brighter spot with some direct sun."}
+    ]
+  },
+  {
+    "slug": "string-of-hearts",
+    "commonName": "String of Hearts",
+    "aliases": ["Ceropegia Woodii", "Rosary Vine"],
+    "scientificName": "Ceropegia woodii",
+    "family": "Apocynaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Bright indirect light with some direct sun; variegation fades in low light.",
+    "water": "Let soil dry out completely between waterings; drought tolerant.",
+    "soil": "Fast-draining succulent mix.",
+    "humidity": "Tolerates dry air.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly in summer.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters along vines.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Shriveled, thin leaves", "cause": "Underwatering", "fix": "Water thoroughly and resume regular (but sparse) watering."},
+      {"symptom": "Yellow, mushy leaves near the tuber/soil line", "cause": "Overwatering / rot", "fix": "Let soil dry out fully, remove rotten growth, repot in fresh fast-draining mix."},
+      {"symptom": "Long bare stretches between leaves", "cause": "Insufficient light", "fix": "Move to brighter light with some direct sun."}
+    ]
+  },
+  {
+    "slug": "jade-plant",
+    "commonName": "Jade Plant",
+    "aliases": ["Crassula Ovata", "Money Plant (succulent)"],
+    "scientificName": "Crassula ovata",
+    "family": "Crassulaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright light with several hours of direct sun.",
+    "water": "Let soil dry out completely between waterings; water deeply then wait.",
+    "soil": "Fast-draining cactus/succulent mix.",
+    "humidity": "Prefers dry air.",
+    "temperature": "65-75°F (18-24°C); protect from frost.",
+    "fertilizer": "Diluted succulent fertilizer 2-3 times in summer.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clumps in leaf joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Soft, mushy, wrinkled leaves that drop easily", "cause": "Overwatering / root rot", "fix": "Stop watering, check roots and trim rot, repot in dry succulent mix."},
+      {"symptom": "Thin, wrinkled, shriveled leaves", "cause": "Underwatering", "fix": "Water thoroughly and resume a regular sparse schedule."},
+      {"symptom": "Leggy, stretched growth leaning to one side", "cause": "Insufficient light", "fix": "Move to a sunnier spot and rotate periodically."},
+      {"symptom": "Red-tinged leaf edges", "cause": "Normal sun-stress response, usually harmless", "fix": "No action needed; indicates strong light exposure."}
+    ]
+  },
+  {
+    "slug": "echeveria",
+    "commonName": "Echeveria",
+    "aliases": ["Echeveria Elegans", "Mexican Snowball"],
+    "scientificName": "Echeveria elegans",
+    "family": "Crassulaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Bright light, several hours of direct sun.",
+    "water": "Soak-and-dry method; let soil dry completely between waterings, avoid wetting the rosette.",
+    "soil": "Fast-draining cactus/succulent mix.",
+    "humidity": "Prefers dry air.",
+    "temperature": "65-80°F (18-27°C); protect from frost.",
+    "fertilizer": "Diluted succulent fertilizer once or twice in summer.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony fuzz between leaves.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Mushy, translucent bottom leaves", "cause": "Overwatering / rot", "fix": "Let soil dry out fully, remove affected leaves, repot in fast-draining mix, water less."},
+      {"symptom": "Stretched, elongated stem ('etiolation')", "cause": "Insufficient light", "fix": "Move to a sunnier location; etiolated growth won't reverse but new growth will be compact."},
+      {"symptom": "Shriveled, puckered leaves", "cause": "Underwatering", "fix": "Water thoroughly and resume a sparse but regular schedule."}
+    ]
+  },
+  {
+    "slug": "haworthia",
+    "commonName": "Haworthia (Zebra Plant)",
+    "aliases": ["Haworthia Fasciata", "Zebra Cactus"],
+    "scientificName": "Haworthia fasciata",
+    "family": "Asphodelaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Bright indirect light; avoid harsh direct sun which can scorch leaves.",
+    "water": "Let soil dry out completely between waterings.",
+    "soil": "Fast-draining cactus/succulent mix.",
+    "humidity": "Prefers dry air.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Diluted succulent fertilizer once or twice in summer.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony fuzz at leaf base.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Soft, mushy, discolored leaves", "cause": "Overwatering / rot", "fix": "Let soil dry fully, remove affected tissue, repot in fast-draining mix."},
+      {"symptom": "White or brown scorch marks on leaves", "cause": "Direct sun exposure/sunburn", "fix": "Move to bright indirect light instead of harsh direct sun."},
+      {"symptom": "Shriveled leaves", "cause": "Underwatering", "fix": "Water thoroughly and resume regular sparse watering."}
+    ]
+  },
+  {
+    "slug": "boston-fern",
+    "commonName": "Boston Fern",
+    "aliases": ["Nephrolepis Exaltata", "Sword Fern"],
+    "scientificName": "Nephrolepis exaltata",
+    "family": "Nephrolepidaceae",
+    "difficulty": "Moderate",
+    "toxicToPets": false,
+    "light": "Bright indirect light; no direct sun.",
+    "water": "Keep soil consistently moist, never fully dry; water when the surface starts to feel dry.",
+    "soil": "Rich, moisture-retentive, well-draining potting mix.",
+    "humidity": "High humidity required (50%+); dry air causes browning.",
+    "temperature": "65-75°F (18-24°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly during growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing and stippled fronds, common in dry air.", "treatment": "Raise humidity, rinse fronds, apply insecticidal soap."},
+      {"name": "Scale", "symptoms": "Small brown bumps on frond undersides.", "treatment": "Scrape off and treat with horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Fronds turning brown and crispy, especially tips", "cause": "Low humidity or underwatering", "fix": "Increase humidity (pebble tray, humidifier, or grouping plants) and keep soil evenly moist."},
+      {"symptom": "Yellowing fronds with wet soil", "cause": "Overwatering / poor drainage", "fix": "Improve drainage and let the surface dry slightly between waterings."},
+      {"symptom": "Fronds dropping heavily", "cause": "Sudden change in environment, drafts, or underwatering", "fix": "Keep in a stable, humid spot away from drafts and heating vents; water consistently."}
+    ]
+  },
+  {
+    "slug": "maidenhair-fern",
+    "commonName": "Maidenhair Fern",
+    "aliases": ["Adiantum Raddianum"],
+    "scientificName": "Adiantum raddianum",
+    "family": "Pteridaceae",
+    "difficulty": "Hard",
+    "toxicToPets": false,
+    "light": "Bright indirect or filtered light; no direct sun.",
+    "water": "Keep soil consistently moist at all times; never let it dry out.",
+    "soil": "Rich, moisture-retentive, well-draining potting mix.",
+    "humidity": "Very high humidity needed (60%+); terrariums or bathrooms work well.",
+    "temperature": "65-75°F (18-24°C), away from drafts.",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, dry crisp fronds.", "treatment": "Raise humidity immediately and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Entire plant crisping up and browning quickly", "cause": "Low humidity or soil dried out even briefly", "fix": "Keep soil constantly moist, boost humidity significantly, and move away from heating/cooling vents."},
+      {"symptom": "Fronds turning black and mushy at the base", "cause": "Overwatering / rot in poorly draining soil", "fix": "Improve drainage while still keeping soil moist; remove any mushy fronds."},
+      {"symptom": "Pale, washed-out fronds", "cause": "Too much direct light", "fix": "Move to filtered or indirect light only."}
+    ]
+  },
+  {
+    "slug": "calathea-medallion",
+    "commonName": "Calathea",
+    "aliases": ["Calathea Medallion", "Goeppertia Roseopicta", "Prayer-like Plant"],
+    "scientificName": "Goeppertia roseopicta",
+    "family": "Marantaceae",
+    "difficulty": "Hard",
+    "toxicToPets": false,
+    "light": "Medium, indirect light; direct sun fades patterned leaves.",
+    "water": "Keep soil evenly moist with filtered/distilled water; avoid letting it dry out or stay soggy.",
+    "soil": "Well-draining, moisture-retentive potting mix.",
+    "humidity": "High humidity required (60%+); brown edges are common in dry air.",
+    "temperature": "65-80°F (18-27°C), no cold drafts.",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing and stippling, very common in low humidity.", "treatment": "Raise humidity immediately, rinse leaves, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Crispy brown leaf edges", "cause": "Low humidity or mineral buildup from tap water", "fix": "Increase humidity, use filtered/distilled water, and trim damaged edges."},
+      {"symptom": "Curling leaves", "cause": "Underwatering, low humidity, or too much light", "fix": "Water consistently, raise humidity, and move out of direct sun."},
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering / root rot", "fix": "Improve drainage and let soil dry slightly before the next watering."},
+      {"symptom": "Faded or bleached leaf pattern", "cause": "Too much direct light", "fix": "Move to a spot with indirect light only."}
+    ]
+  },
+  {
+    "slug": "prayer-plant",
+    "commonName": "Prayer Plant",
+    "aliases": ["Maranta Leuconeura"],
+    "scientificName": "Maranta leuconeura",
+    "family": "Marantaceae",
+    "difficulty": "Moderate-Hard",
+    "toxicToPets": false,
+    "light": "Medium, indirect light; leaves fold up at night ('praying').",
+    "water": "Keep soil consistently moist with filtered water; don't let it fully dry out.",
+    "soil": "Well-draining, moisture-retentive potting mix.",
+    "humidity": "High humidity preferred (50-60%).",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing and speckled leaves in dry air.", "treatment": "Raise humidity and treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Crispy brown edges", "cause": "Low humidity or tap water minerals", "fix": "Increase humidity and switch to filtered/distilled water."},
+      {"symptom": "Curling, drooping leaves that don't fold at night", "cause": "Underwatering or low humidity", "fix": "Water more consistently and raise humidity."},
+      {"symptom": "Yellowing leaves with soggy soil", "cause": "Overwatering", "fix": "Improve drainage, let soil dry slightly between waterings."}
+    ]
+  },
+  {
+    "slug": "chinese-evergreen",
+    "commonName": "Chinese Evergreen",
+    "aliases": ["Aglaonema"],
+    "scientificName": "Aglaonema commutatum",
+    "family": "Araceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Low to medium indirect light; more variegated varieties want brighter light.",
+    "water": "Let the top 1-2 in of soil dry out between waterings.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Prefers moderate to high humidity but adapts.",
+    "temperature": "65-80°F (18-27°C); sensitive to cold drafts.",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at leaf joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering", "fix": "Let soil dry more between waterings and check drainage."},
+      {"symptom": "Brown leaf edges/tips", "cause": "Low humidity, cold drafts, or tap water minerals", "fix": "Raise humidity, keep away from drafts, use filtered water."},
+      {"symptom": "Faded, washed-out leaf color", "cause": "Too much direct light", "fix": "Move to lower, indirect light."}
+    ]
+  },
+  {
+    "slug": "dracaena-marginata",
+    "commonName": "Dragon Tree",
+    "aliases": ["Dracaena Marginata", "Madagascar Dragon Tree"],
+    "scientificName": "Dracaena marginata",
+    "family": "Asparagaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright indirect light; tolerates medium light.",
+    "water": "Let the top 1-2 in of soil dry out between waterings; sensitive to fluoride in tap water.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Tolerates average humidity.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, speckled leaves.", "treatment": "Wipe leaves and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Brown leaf tips with yellow border", "cause": "Fluoride/chlorine sensitivity from tap water, or low humidity", "fix": "Switch to filtered or distilled water and trim damaged tips."},
+      {"symptom": "Yellow, soft lower leaves", "cause": "Overwatering", "fix": "Let soil dry out more between waterings."},
+      {"symptom": "Leaves dropping suddenly", "cause": "Cold drafts, shock from relocation, or overwatering", "fix": "Keep in a stable warm spot away from drafts and check watering routine."}
+    ]
+  },
+  {
+    "slug": "corn-plant",
+    "commonName": "Corn Plant",
+    "aliases": ["Dracaena Fragrans"],
+    "scientificName": "Dracaena fragrans",
+    "family": "Asparagaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Low to bright indirect light.",
+    "water": "Let the top 1-2 in of soil dry out between waterings; sensitive to fluoride.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Average household humidity is fine.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Speckled leaves, fine webbing.", "treatment": "Wipe leaves and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Brown tips and streaks on leaves", "cause": "Fluoride/chlorine sensitivity or low humidity", "fix": "Use filtered/distilled water and raise humidity slightly."},
+      {"symptom": "Yellow, drooping leaves with wet soil", "cause": "Overwatering", "fix": "Let soil dry more between waterings."},
+      {"symptom": "Pale streaked leaves", "cause": "Too much direct sun", "fix": "Move to indirect light."}
+    ]
+  },
+  {
+    "slug": "croton",
+    "commonName": "Croton",
+    "aliases": ["Codiaeum Variegatum"],
+    "scientificName": "Codiaeum variegatum",
+    "family": "Euphorbiaceae",
+    "difficulty": "Moderate",
+    "toxicToPets": true,
+    "light": "Bright light, including some direct sun, to maintain vivid color.",
+    "water": "Keep soil evenly moist; water when the top inch is dry.",
+    "soil": "Well-draining, rich potting mix.",
+    "humidity": "Prefers higher humidity (50%+).",
+    "temperature": "65-85°F (18-29°C); dislikes cold drafts and sudden changes.",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, speckled leaves.", "treatment": "Raise humidity, wipe leaves, apply insecticidal soap."},
+      {"name": "Mealybugs", "symptoms": "White cottony clusters on stems/leaf joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Leaf drop, sometimes sudden", "cause": "Environmental shock (draft, temperature swing, or relocation)", "fix": "Keep in a stable warm, bright spot; avoid moving it or exposing it to drafts."},
+      {"symptom": "Fading color, leaves turning more green", "cause": "Insufficient light", "fix": "Move to brighter light with some direct sun."},
+      {"symptom": "Brown, dry leaf edges", "cause": "Low humidity or underwatering", "fix": "Water more consistently and raise humidity."}
+    ]
+  },
+  {
+    "slug": "weeping-fig",
+    "commonName": "Weeping Fig",
+    "aliases": ["Ficus Benjamina"],
+    "scientificName": "Ficus benjamina",
+    "family": "Moraceae",
+    "difficulty": "Moderate",
+    "toxicToPets": true,
+    "light": "Bright indirect light; tolerates some direct sun.",
+    "water": "Let the top 1-2 in of soil dry out between waterings.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Average to above-average humidity preferred.",
+    "temperature": "65-75°F (18-24°C); very sensitive to drafts and sudden change.",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Scale", "symptoms": "Brown bumps on stems, sticky leaves, sooty mold.", "treatment": "Scrape off scale and treat with horticultural oil."},
+      {"name": "Spider mites", "symptoms": "Fine webbing and stippling.", "treatment": "Wipe leaves, raise humidity, apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Sudden, dramatic leaf drop", "cause": "Notoriously reactive to change — drafts, relocation, temperature swings, or watering changes", "fix": "Keep in a stable spot, away from drafts/vents, with a consistent watering routine; new leaves will regrow."},
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering", "fix": "Let soil dry more between waterings."},
+      {"symptom": "Sticky leaves with black sooty coating", "cause": "Sooty mold growing on pest honeydew (scale/aphids)", "fix": "Treat the underlying pest infestation, then wipe leaves clean."}
+    ]
+  },
+  {
+    "slug": "english-ivy",
+    "commonName": "English Ivy",
+    "aliases": ["Hedera Helix"],
+    "scientificName": "Hedera helix",
+    "family": "Araliaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright indirect light; tolerates medium light.",
+    "water": "Let the top inch of soil dry out between waterings; keep evenly moist, not soggy.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Prefers moderate to high humidity; dry air invites spider mites.",
+    "temperature": "50-70°F (10-21°C); prefers it cooler than most houseplants.",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, speckled dull leaves — very common on ivy in dry indoor air.", "treatment": "Raise humidity, rinse leaves regularly, apply insecticidal soap or neem oil."},
+      {"name": "Aphids", "symptoms": "Small insects clustered on new growth.", "treatment": "Rinse off and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Dull, speckled leaves with fine webbing", "cause": "Spider mite infestation, often from warm dry air", "fix": "Move to a cooler spot, raise humidity, and treat with insecticidal soap."},
+      {"symptom": "Yellow leaves with soggy soil", "cause": "Overwatering", "fix": "Let soil dry slightly more between waterings."},
+      {"symptom": "Brown leaf tips", "cause": "Low humidity or underwatering", "fix": "Water consistently and mist or use a humidity tray."}
+    ]
+  },
+  {
+    "slug": "anthurium",
+    "commonName": "Anthurium",
+    "aliases": ["Flamingo Flower", "Laceleaf"],
+    "scientificName": "Anthurium andraeanum",
+    "family": "Araceae",
+    "difficulty": "Moderate",
+    "toxicToPets": true,
+    "light": "Bright indirect light for best blooming.",
+    "water": "Let the top 1-2 in of soil dry out between waterings.",
+    "soil": "Chunky, well-draining aroid mix.",
+    "humidity": "Prefers high humidity (60%+).",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Balanced or bloom-boosting liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at leaf/stem joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."},
+      {"name": "Spider mites", "symptoms": "Fine webbing, speckled leaves in dry air.", "treatment": "Raise humidity and treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering / root rot", "fix": "Let soil dry more between waterings and ensure a chunky, fast-draining mix."},
+      {"symptom": "No flowers (spathes) or very few", "cause": "Insufficient light or nutrients", "fix": "Move to brighter indirect light and feed regularly during growing season."},
+      {"symptom": "Brown, crispy leaf edges", "cause": "Low humidity or mineral buildup", "fix": "Raise humidity and flush soil periodically with filtered water."}
+    ]
+  },
+  {
+    "slug": "phalaenopsis-orchid",
+    "commonName": "Phalaenopsis Orchid",
+    "aliases": ["Moth Orchid"],
+    "scientificName": "Phalaenopsis spp.",
+    "family": "Orchidaceae",
+    "difficulty": "Moderate",
+    "toxicToPets": false,
+    "light": "Bright indirect light; no direct sun.",
+    "water": "Water weekly by soaking roots, then let the orchid bark/mix dry out almost completely before watering again. Never leave standing water in the crown.",
+    "soil": "Special orchid bark mix, not regular potting soil (needs airflow around roots).",
+    "humidity": "Prefers 50-70% humidity.",
+    "temperature": "65-80°F (18-27°C) day, slightly cooler at night to encourage blooming.",
+    "fertilizer": "Weak, balanced orchid fertilizer weekly or biweekly during growing season ('weakly, weekly').",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at leaf base or on roots.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."},
+      {"name": "Scale", "symptoms": "Small brown bumps on leaf undersides.", "treatment": "Scrape off and apply horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Yellowing, wrinkled, or mushy roots (visible through a clear pot)", "cause": "Overwatering / root rot", "fix": "Let the mix dry out more between waterings, trim mushy roots with sterilized scissors, repot in fresh orchid bark."},
+      {"symptom": "Shriveled leaves and roots", "cause": "Underwatering or roots that can't absorb water (rot)", "fix": "Soak thoroughly and check root health; healthy roots are firm and green/silvery when dry."},
+      {"symptom": "No flower spikes", "cause": "Insufficient light or lack of a cool-temperature trigger", "fix": "Move to brighter indirect light; a slight nighttime temperature drop in fall often triggers blooming."},
+      {"symptom": "Sunburned patches (white/yellow bleached spots)", "cause": "Direct sun exposure", "fix": "Move out of direct sunlight into bright indirect light."}
+    ]
+  },
+  {
+    "slug": "african-violet",
+    "commonName": "African Violet",
+    "aliases": ["Saintpaulia"],
+    "scientificName": "Saintpaulia ionantha",
+    "family": "Gesneriaceae",
+    "difficulty": "Moderate",
+    "toxicToPets": false,
+    "light": "Bright indirect light; no direct sun, which scorches fuzzy leaves.",
+    "water": "Keep soil lightly moist; water from the bottom or avoid wetting leaves to prevent spotting.",
+    "soil": "Light, well-draining African violet potting mix.",
+    "humidity": "Prefers moderate to high humidity (40-60%).",
+    "temperature": "65-75°F (18-24°C); avoid cold drafts.",
+    "fertilizer": "Diluted African violet fertilizer every 2-4 weeks in growing season.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony fuzz in leaf crown.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."},
+      {"name": "Cyclamen mites", "symptoms": "Distorted, stunted new growth in the center of the plant.", "treatment": "Isolate the plant and discard severely infested plants; miticide for valuable specimens."}
+    ],
+    "issues": [
+      {"symptom": "Ring-shaped pale or brown spots on leaves", "cause": "Cold water touching leaves (leaf spotting)", "fix": "Water from below or use room-temperature water and avoid splashing leaves."},
+      {"symptom": "Few or no flowers", "cause": "Insufficient light", "fix": "Move to a brighter spot with bright indirect light or supplement with a grow light."},
+      {"symptom": "Yellow, mushy crown", "cause": "Overwatering / crown rot", "fix": "Water less often, ensure the pot drains well, and avoid water sitting in the crown."}
+    ]
+  },
+  {
+    "slug": "christmas-cactus",
+    "commonName": "Christmas Cactus",
+    "aliases": ["Schlumbergera"],
+    "scientificName": "Schlumbergera bridgesii",
+    "family": "Cactaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Bright indirect light; some direct morning sun is fine.",
+    "water": "Let the top inch of soil dry out between waterings; unlike desert cacti, don't let it stay bone dry for long.",
+    "soil": "Well-draining potting mix (slightly more moisture-retentive than typical cactus mix).",
+    "humidity": "Tolerates average humidity.",
+    "temperature": "65-75°F (18-24°C); needs cooler temps and shorter days in fall to set buds.",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season, none while budding/blooming.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony spots between segments.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Limp, shriveled, wrinkled segments", "cause": "Underwatering", "fix": "Water thoroughly and resume a regular watering routine."},
+      {"symptom": "Segments turning red/purple", "cause": "Cold stress, too much light, or normal seasonal response", "fix": "Usually harmless; move away from cold drafts and excess direct light if it's unwanted."},
+      {"symptom": "Buds dropping before opening", "cause": "Sudden change in light, temperature, or watering while budding", "fix": "Keep conditions stable once buds form; avoid moving the plant."},
+      {"symptom": "Mushy, discolored segments", "cause": "Overwatering / rot", "fix": "Let soil dry out more and improve drainage."}
+    ]
+  },
+  {
+    "slug": "bird-of-paradise",
+    "commonName": "Bird of Paradise",
+    "aliases": ["Strelitzia Reginae"],
+    "scientificName": "Strelitzia reginae",
+    "family": "Strelitziaceae",
+    "difficulty": "Moderate",
+    "toxicToPets": true,
+    "light": "Bright light with several hours of direct sun for best growth/flowering.",
+    "water": "Let the top 1-2 in of soil dry out between waterings; keep more consistently moist in summer.",
+    "soil": "Rich, well-draining potting mix.",
+    "humidity": "Prefers moderate to high humidity.",
+    "temperature": "65-85°F (18-29°C); protect from cold.",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, speckled leaves.", "treatment": "Wipe leaves, raise humidity, apply insecticidal soap."},
+      {"name": "Scale", "symptoms": "Brown bumps on stems/leaf undersides.", "treatment": "Scrape off and treat with horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Splitting leaves", "cause": "Normal — leaves split naturally to withstand wind, not a problem", "fix": "No action needed; this is normal growth habit."},
+      {"symptom": "No flowers", "cause": "Insufficient light, young plant, or being pot-bound isn't yet reached", "fix": "Move to a sunnier spot; plants typically need several years and a slightly snug pot to bloom."},
+      {"symptom": "Brown leaf edges", "cause": "Underwatering, low humidity, or fertilizer buildup", "fix": "Water more consistently, raise humidity, and flush soil periodically."},
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering", "fix": "Let soil dry more between waterings."}
+    ]
+  },
+  {
+    "slug": "areca-palm",
+    "commonName": "Areca Palm",
+    "aliases": ["Dypsis Lutescens", "Butterfly Palm"],
+    "scientificName": "Dypsis lutescens",
+    "family": "Arecaceae",
+    "difficulty": "Moderate",
+    "toxicToPets": false,
+    "light": "Bright indirect light; some gentle morning sun.",
+    "water": "Keep soil evenly moist but not soggy; let the top inch dry between waterings.",
+    "soil": "Well-draining, rich potting mix.",
+    "humidity": "Prefers higher humidity; brown tips common in dry air.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Balanced palm fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing and stippling on fronds, common in dry indoor air.", "treatment": "Raise humidity, rinse fronds, apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Brown frond tips", "cause": "Low humidity, tap water minerals (fluoride/salts), or underwatering", "fix": "Use filtered water, raise humidity, and water consistently."},
+      {"symptom": "Yellowing fronds with wet soil", "cause": "Overwatering", "fix": "Let soil dry slightly more between waterings and check drainage."},
+      {"symptom": "Pale, yellow fronds overall", "cause": "Too much direct sun or nutrient deficiency", "fix": "Move out of direct sun and feed regularly in growing season."}
+    ]
+  },
+  {
+    "slug": "parlor-palm",
+    "commonName": "Parlor Palm",
+    "aliases": ["Chamaedorea Elegans"],
+    "scientificName": "Chamaedorea elegans",
+    "family": "Arecaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Low to bright indirect light; very shade tolerant.",
+    "water": "Let the top inch of soil dry out between waterings.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Tolerates average humidity, prefers more.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, speckled fronds.", "treatment": "Raise humidity and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Brown frond tips", "cause": "Low humidity or tap water minerals", "fix": "Use filtered water and raise humidity slightly."},
+      {"symptom": "Yellow fronds with wet soil", "cause": "Overwatering", "fix": "Let soil dry more between waterings."},
+      {"symptom": "Slow, stretched growth", "cause": "Insufficient light (though it tolerates low light, growth is slower)", "fix": "Move to a slightly brighter spot if growth stalls for a long time."}
+    ]
+  },
+  {
+    "slug": "money-tree",
+    "commonName": "Money Tree",
+    "aliases": ["Pachira Aquatica"],
+    "scientificName": "Pachira aquatica",
+    "family": "Malvaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Bright indirect light; tolerates medium light.",
+    "water": "Let the top 1-2 in of soil dry out between waterings; sensitive to overwatering despite its 'aquatica' name.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Prefers moderate to high humidity.",
+    "temperature": "65-80°F (18-27°C); avoid cold drafts.",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, stippled leaves.", "treatment": "Wipe leaves and apply insecticidal soap."},
+      {"name": "Mealybugs", "symptoms": "White cottony clusters in leaf joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves dropping, soil stays wet", "cause": "Overwatering / root rot", "fix": "Let soil dry more between waterings and ensure the pot drains well."},
+      {"symptom": "Brown, crispy leaf edges", "cause": "Underwatering or low humidity", "fix": "Water more consistently and raise humidity."},
+      {"symptom": "Leggy growth reaching toward light", "cause": "Insufficient light", "fix": "Move to brighter indirect light and rotate periodically."}
+    ]
+  },
+  {
+    "slug": "norfolk-island-pine",
+    "commonName": "Norfolk Island Pine",
+    "aliases": ["Araucaria Heterophylla"],
+    "scientificName": "Araucaria heterophylla",
+    "family": "Araucariaceae",
+    "difficulty": "Moderate",
+    "toxicToPets": true,
+    "light": "Bright indirect light; some direct sun is fine, but rotate regularly for even growth.",
+    "water": "Keep soil lightly, evenly moist; let the top inch dry between waterings.",
+    "soil": "Well-draining, slightly acidic potting mix.",
+    "humidity": "Prefers higher humidity; dry air causes needle drop.",
+    "temperature": "60-75°F (15-24°C); avoid drafts and heating vents.",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, browning needles, common in dry heated air.", "treatment": "Raise humidity, rinse foliage, apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Lower branches turning brown and dropping", "cause": "Low humidity, insufficient light, or being too close to a heating vent", "fix": "Raise humidity, move to brighter indirect light, and keep away from heat sources — note that dropped lower branches don't regrow."},
+      {"symptom": "Yellow needles with wet soil", "cause": "Overwatering", "fix": "Let soil dry slightly more between waterings."},
+      {"symptom": "One-sided, lopsided growth", "cause": "Uneven light exposure", "fix": "Rotate the pot a quarter turn every couple of weeks."}
+    ]
+  },
+  {
+    "slug": "air-plant",
+    "commonName": "Air Plant",
+    "aliases": ["Tillandsia"],
+    "scientificName": "Tillandsia ionantha",
+    "family": "Bromeliaceae",
+    "difficulty": "Easy-Moderate",
+    "toxicToPets": false,
+    "light": "Bright indirect light; some gentle direct morning sun.",
+    "water": "No soil — soak in room-temperature water for 20-30 minutes once or twice a week, then shake off excess water and let fully dry within 4 hours (upside down) to prevent rot.",
+    "soil": "None; grows without soil (epiphyte). Needs good airflow.",
+    "humidity": "Prefers moderate to high humidity between soakings.",
+    "temperature": "50-90°F (10-32°C).",
+    "fertilizer": "Diluted bromeliad/air plant fertilizer monthly, mixed into the soak water.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at the base.", "treatment": "Remove with alcohol swab; rinse well afterward."}
+    ],
+    "issues": [
+      {"symptom": "Leaves turning brown, dry, and crispy — often at the base first", "cause": "Underwatering or air that's too dry", "fix": "Soak more frequently (2-3 times a week) and mist between soaks."},
+      {"symptom": "Base turns dark, mushy, and leaves pull out easily", "cause": "Rot from not drying out fully after soaking, or water pooling in the base", "fix": "Always shake off excess water and dry upside down; never let the plant sit wet, especially in the crown."},
+      {"symptom": "Curling, tightly rolled leaves", "cause": "Thirsty / underwatered", "fix": "Increase soaking frequency."}
+    ]
+  },
+  {
+    "slug": "kalanchoe",
+    "commonName": "Kalanchoe",
+    "aliases": ["Kalanchoe Blossfeldiana", "Flaming Katy"],
+    "scientificName": "Kalanchoe blossfeldiana",
+    "family": "Crassulaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright light including some direct sun.",
+    "water": "Let soil dry out between waterings; drought tolerant succulent.",
+    "soil": "Fast-draining cactus/succulent mix.",
+    "humidity": "Tolerates dry air.",
+    "temperature": "65-75°F (18-24°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly during growing season, none while blooming.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters on stems.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."},
+      {"name": "Aphids", "symptoms": "Clusters on flower buds and new growth.", "treatment": "Rinse off and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Mushy, soft leaves and stems", "cause": "Overwatering / rot", "fix": "Let soil dry out fully, trim rot, repot in dry succulent mix."},
+      {"symptom": "No reblooming after the first flush of flowers", "cause": "Kalanchoe needs long uninterrupted dark periods (like poinsettias) to rebloom", "fix": "Give it 14 hours of complete darkness nightly for several weeks to trigger new buds, or treat as an annual bloom."},
+      {"symptom": "Stretched, leggy stems", "cause": "Insufficient light", "fix": "Move to a brighter, sunnier spot."}
+    ]
+  },
+  {
+    "slug": "rex-begonia",
+    "commonName": "Rex Begonia",
+    "aliases": ["Begonia Rex", "Painted-Leaf Begonia"],
+    "scientificName": "Begonia rex",
+    "family": "Begoniaceae",
+    "difficulty": "Moderate-Hard",
+    "toxicToPets": true,
+    "light": "Bright indirect light; no direct sun.",
+    "water": "Let the top inch of soil dry out between waterings; avoid wetting the leaves.",
+    "soil": "Well-draining, rich potting mix.",
+    "humidity": "Prefers high humidity (50%+).",
+    "temperature": "65-75°F (18-24°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Powdery mildew (fungal, not a pest)", "symptoms": "White powdery coating on leaves, common in poor air circulation.", "treatment": "Improve airflow, avoid wetting foliage, and treat with a fungicide labeled for powdery mildew if it spreads."},
+      {"name": "Mealybugs", "symptoms": "White cottony clusters.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "White powdery patches on leaves", "cause": "Powdery mildew fungus, usually from poor airflow or high humidity with stagnant air", "fix": "Improve air circulation, avoid overhead watering, remove badly affected leaves, apply fungicide if needed."},
+      {"symptom": "Brown, crispy leaf edges", "cause": "Low humidity", "fix": "Raise humidity and avoid placing near heating/cooling vents."},
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering", "fix": "Let soil dry more between waterings."}
+    ]
+  },
+  {
+    "slug": "coleus",
+    "commonName": "Coleus",
+    "aliases": ["Plectranthus Scutellarioides", "Painted Nettle"],
+    "scientificName": "Coleus scutellarioides",
+    "family": "Lamiaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright indirect light to some direct sun for best color.",
+    "water": "Keep soil consistently moist; doesn't tolerate drying out well.",
+    "soil": "Rich, well-draining potting mix.",
+    "humidity": "Average household humidity is fine.",
+    "temperature": "60-80°F (15-27°C); no frost.",
+    "fertilizer": "Balanced liquid fertilizer every 2-4 weeks in growing season.",
+    "pests": [
+      {"name": "Aphids", "symptoms": "Small insects clustered on new growth and stems.", "treatment": "Rinse off with water and apply insecticidal soap."},
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at leaf joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Wilting even though soil feels moist", "cause": "Root rot from overwatering, or heat stress", "fix": "Check roots for rot if soil is soggy; move out of intense heat and improve drainage."},
+      {"symptom": "Leggy, sparse growth", "cause": "Insufficient light or not being pinched back", "fix": "Move to brighter light and regularly pinch growing tips to encourage bushiness."},
+      {"symptom": "Faded leaf color", "cause": "Too little light", "fix": "Move to a brighter spot with some direct sun."},
+      {"symptom": "Crispy brown edges", "cause": "Underwatering", "fix": "Water more frequently — coleus dries out quickly and doesn't like to stay dry."}
+    ]
+  },
+  {
+    "slug": "watermelon-peperomia",
+    "commonName": "Watermelon Peperomia",
+    "aliases": ["Peperomia Argyreia"],
+    "scientificName": "Peperomia argyreia",
+    "family": "Piperaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Bright indirect light; tolerates medium light.",
+    "water": "Let the top 1-2 in of soil dry out between waterings; semi-succulent, sensitive to overwatering.",
+    "soil": "Well-draining potting mix with perlite.",
+    "humidity": "Tolerates average humidity, prefers slightly more.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at leaf/stem joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Soft, mushy, translucent leaves and stems", "cause": "Overwatering / rot (very common with this semi-succulent plant)", "fix": "Let soil dry out fully, trim mushy stems, repot in fast-draining mix, water less often."},
+      {"symptom": "Wrinkled, shriveled leaves", "cause": "Underwatering", "fix": "Water thoroughly and resume regular watering."},
+      {"symptom": "Long thin stems with small leaves", "cause": "Insufficient light", "fix": "Move to brighter indirect light."}
+    ]
+  },
+  {
+    "slug": "hoya",
+    "commonName": "Hoya (Wax Plant)",
+    "aliases": ["Hoya Carnosa"],
+    "scientificName": "Hoya carnosa",
+    "family": "Apocynaceae",
+    "difficulty": "Easy",
+    "toxicToPets": false,
+    "light": "Bright indirect light with some direct sun for blooming.",
+    "water": "Let soil dry out most of the way between waterings; semi-succulent vine, sensitive to overwatering.",
+    "soil": "Well-draining, chunky potting mix with perlite/bark.",
+    "humidity": "Tolerates average humidity, prefers more.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Diluted balanced fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters at leaf/stem joints.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."},
+      {"name": "Aphids", "symptoms": "Clusters on flower buds and new growth, sticky residue.", "treatment": "Rinse off and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Soft, wrinkled or yellowing leaves with wet soil", "cause": "Overwatering / root rot", "fix": "Let soil dry out more thoroughly between waterings and ensure fast drainage."},
+      {"symptom": "Shriveled, thin leaves", "cause": "Underwatering", "fix": "Water thoroughly and resume regular sparse watering."},
+      {"symptom": "No flower clusters despite maturity", "cause": "Insufficient light, or flower spurs were pruned off", "fix": "Move to brighter light with some direct sun, and never trim off the short spurs flowers regrow from."}
+    ]
+  },
+  {
+    "slug": "guzmania-bromeliad",
+    "commonName": "Bromeliad",
+    "aliases": ["Guzmania"],
+    "scientificName": "Guzmania lingulata",
+    "family": "Bromeliaceae",
+    "difficulty": "Easy-Moderate",
+    "toxicToPets": false,
+    "light": "Bright indirect light; no direct sun.",
+    "water": "Keep the central 'cup' rosette filled with fresh water (flush and refill every 1-2 weeks), and keep soil lightly moist.",
+    "soil": "Well-draining, light potting mix (often bark-based).",
+    "humidity": "Prefers high humidity.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Very diluted balanced fertilizer occasionally; bromeliads need little feeding.",
+    "pests": [
+      {"name": "Scale", "symptoms": "Small brown bumps on leaves.", "treatment": "Scrape off and treat with horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Central cup water turning stagnant/smelly", "cause": "Water not being flushed regularly", "fix": "Empty and refill the cup with fresh water every 1-2 weeks."},
+      {"symptom": "Mother plant fading and dying after flowering", "cause": "Normal life cycle — bromeliads bloom once then decline, producing offset 'pups'", "fix": "This is normal; let pups grow to about a third the size of the parent before separating and potting them."},
+      {"symptom": "Brown leaf tips", "cause": "Low humidity or mineral buildup", "fix": "Raise humidity and use filtered water in the cup."}
+    ]
+  },
+  {
+    "slug": "cast-iron-plant",
+    "commonName": "Cast Iron Plant",
+    "aliases": ["Aspidistra Elatior"],
+    "scientificName": "Aspidistra elatior",
+    "family": "Asparagaceae",
+    "difficulty": "Very Easy",
+    "toxicToPets": false,
+    "light": "Low to medium indirect light; extremely tolerant of neglect and shade.",
+    "water": "Let soil dry out between waterings; very forgiving.",
+    "soil": "Well-draining, general-purpose potting mix.",
+    "humidity": "Tolerates dry air.",
+    "temperature": "50-85°F (10-29°C).",
+    "fertilizer": "Light feeding with balanced fertilizer 1-2 times in summer.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Rare; fine webbing in very dry conditions.", "treatment": "Wipe leaves and apply insecticidal soap if seen."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves with wet soil", "cause": "Overwatering (uncommon since it's very tolerant, but possible)", "fix": "Let soil dry out more between waterings."},
+      {"symptom": "Brown leaf tips", "cause": "Direct sun exposure or extended drought", "fix": "Move out of direct sun and water more regularly."},
+      {"symptom": "Slow growth", "cause": "Normal — this plant is naturally slow-growing regardless of care", "fix": "No action needed; be patient."}
+    ]
+  },
+  {
+    "slug": "schefflera",
+    "commonName": "Umbrella Plant",
+    "aliases": ["Schefflera Arboricola", "Dwarf Umbrella Tree"],
+    "scientificName": "Schefflera arboricola",
+    "family": "Araliaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright indirect light; tolerates medium light.",
+    "water": "Let the top 1-2 in of soil dry out between waterings.",
+    "soil": "Well-draining potting mix.",
+    "humidity": "Tolerates average humidity.",
+    "temperature": "65-80°F (18-27°C).",
+    "fertilizer": "Balanced liquid fertilizer monthly in growing season.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing and stippling on leaves.", "treatment": "Wipe leaves and apply insecticidal soap."},
+      {"name": "Scale", "symptoms": "Brown bumps on stems, sticky leaves.", "treatment": "Scrape off and treat with horticultural oil."}
+    ],
+    "issues": [
+      {"symptom": "Yellow leaves dropping with wet soil", "cause": "Overwatering", "fix": "Let soil dry more between waterings and check drainage."},
+      {"symptom": "Leggy growth with sparse leaves", "cause": "Insufficient light", "fix": "Move to brighter indirect light and prune to encourage branching."},
+      {"symptom": "Brown leaf edges", "cause": "Underwatering or low humidity", "fix": "Water more consistently and raise humidity slightly."}
+    ]
+  },
+  {
+    "slug": "yucca-cane",
+    "commonName": "Yucca Cane",
+    "aliases": ["Yucca Elephantipes", "Spineless Yucca"],
+    "scientificName": "Yucca elephantipes",
+    "family": "Asparagaceae",
+    "difficulty": "Very Easy",
+    "toxicToPets": true,
+    "light": "Bright light, including several hours of direct sun.",
+    "water": "Let soil dry out fully between waterings; very drought tolerant.",
+    "soil": "Fast-draining potting mix, cactus/succulent blend works well.",
+    "humidity": "Tolerates dry air.",
+    "temperature": "65-85°F (18-29°C); protect from frost.",
+    "fertilizer": "Light feeding with balanced fertilizer a couple times in summer.",
+    "pests": [
+      {"name": "Spider mites", "symptoms": "Fine webbing, speckled leaves.", "treatment": "Wipe leaves and apply insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Soft, mushy cane or leaves", "cause": "Overwatering / rot", "fix": "Let soil dry out fully, cut away mushy sections above healthy tissue, repot in dry fast-draining mix."},
+      {"symptom": "Brown tips on leaves", "cause": "Underwatering, low humidity, or mineral buildup", "fix": "Water thoroughly on a regular schedule and flush soil occasionally."},
+      {"symptom": "Pale, stretched leaves", "cause": "Insufficient light", "fix": "Move to a sunnier location."}
+    ]
+  },
+  {
+    "slug": "lucky-bamboo",
+    "commonName": "Lucky Bamboo",
+    "aliases": ["Dracaena Sanderiana"],
+    "scientificName": "Dracaena sanderiana",
+    "family": "Asparagaceae",
+    "difficulty": "Easy",
+    "toxicToPets": true,
+    "light": "Bright, indirect light; no direct sun, which scorches leaves.",
+    "water": "If grown in water, change it weekly and keep roots fully submerged; if in soil, keep evenly moist. Very sensitive to fluoride/chlorine.",
+    "soil": "Often grown in water with pebbles, or well-draining soil.",
+    "humidity": "Tolerates average humidity.",
+    "temperature": "65-90°F (18-32°C); avoid cold drafts.",
+    "fertilizer": "A drop of diluted liquid fertilizer once a month if grown in water.",
+    "pests": [
+      {"name": "Mealybugs", "symptoms": "White cottony clusters on stems.", "treatment": "Remove with alcohol swab, treat with insecticidal soap."}
+    ],
+    "issues": [
+      {"symptom": "Yellowing stalks/leaves", "cause": "Tap water chemicals (chlorine/fluoride), direct sun, or old stagnant water", "fix": "Use filtered or distilled water, change water weekly, and move out of direct sun."},
+      {"symptom": "Black, rotting roots in water", "cause": "Water not changed often enough, allowing bacterial growth", "fix": "Change water weekly, trim off blackened roots, rinse the container thoroughly."},
+      {"symptom": "Brown leaf tips", "cause": "Tap water minerals or dry air", "fix": "Switch to filtered/distilled water."}
+    ]
+  },
+  {
+    "slug": "venus-flytrap",
+    "commonName": "Venus Flytrap",
+    "aliases": ["Dionaea Muscipula"],
+    "scientificName": "Dionaea muscipula",
+    "family": "Droseraceae",
+    "difficulty": "Hard",
+    "toxicToPets": false,
+    "light": "Very bright light, ideally several hours of direct sun daily (a sunny windowsill or grow light).",
+    "water": "Keep soil constantly wet using only distilled, rain, or reverse-osmosis water in a tray (tap water minerals will kill it). Never let it dry out.",
+    "soil": "Nutrient-free, acidic mix: unfertilized sphagnum peat moss mixed with perlite or sand — never regular potting soil or fertilizer.",
+    "humidity": "Prefers moderate to high humidity (50%+).",
+    "temperature": "70-80°F (21-27°C) in summer; needs a cooler winter dormancy period around 35-50°F (2-10°C).",
+    "fertilizer": "None in soil — never fertilize the soil. It gets nutrients from catching insects; do not feed it hamburger meat or human food.",
+    "pests": [
+      {"name": "Aphids", "symptoms": "Small insects on new growth/flower stalks.", "treatment": "Rinse off gently with distilled water; avoid chemical pesticides which can harm the plant."}
+    ],
+    "issues": [
+      {"symptom": "Black, dying traps", "cause": "Normal — individual traps naturally die after a few catches/openings, or from tap water minerals", "fix": "Trim off blackened traps; ensure only distilled/rain water is used going forward."},
+      {"symptom": "No traps closing or weak response", "cause": "Insufficient light or the plant is stressed/exhausted from too much manual triggering", "fix": "Increase direct light exposure and avoid triggering traps without feeding them."},
+      {"symptom": "Plant turning entirely black and mushy", "cause": "Tap water minerals/fertilizer poisoning, or rot from poor dormancy conditions", "fix": "Switch immediately to distilled/rain water only, use nutrient-free soil, and provide a proper cool winter dormancy."},
+      {"symptom": "Weak, pale, spindly growth", "cause": "Insufficient light", "fix": "Move to the sunniest spot available or supplement with a strong grow light."}
+    ]
+  }
+]

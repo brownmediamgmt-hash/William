@@ -1,0 +1,17 @@
+{
+  "name": "William — Plant Health Scanner",
+  "short_name": "William",
+  "description": "Scan a plant with your camera to identify it and diagnose care issues.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1712",
+  "theme_color": "#2f6b3c",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

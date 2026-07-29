@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>William — Plant Health Scanner</title>
+  <meta name="description" content="Scan a plant with your camera to identify it and get accurate light, water, soil, and disease/pest guidance." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#2f6b3c" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">🌿</span>
+      <span class="brand-name">William</span>
+      <span class="brand-sub">Plant Health Scanner</span>
+    </div>
+    <nav class="tabs" aria-label="Main navigation">
+      <button class="tab-btn active" data-tab="scan" type="button">Scan</button>
+      <button class="tab-btn" data-tab="diagnose" type="button">Diagnose</button>
+      <button class="tab-btn" data-tab="browse" type="button">Plant Guide</button>
+      <button class="tab-btn" data-tab="history" type="button">History</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SCAN TAB -->
+    <section id="tab-scan" class="tab-panel active">
+      <div id="config-banner" class="banner hidden"></div>
+
+      <div class="camera-card">
+        <div class="camera-frame" id="camera-frame">
+          <video id="camera-video" playsinline autoplay muted></video>
+          <img id="captured-preview" alt="Captured plant photo" class="hidden" />
+          <div id="camera-placeholder" class="camera-placeholder">
+            <span aria-hidden="true">📷</span>
+            <p>Point your camera at a plant, or upload a photo.</p>
+          </div>
+        </div>
+
+        <canvas id="capture-canvas" class="hidden"></canvas>
+
+        <div class="camera-controls">
+          <button id="btn-start-camera" class="btn" type="button">Start Camera</button>
+          <button id="btn-capture" class="btn btn-primary hidden" type="button">📸 Capture</button>
+          <button id="btn-retake" class="btn hidden" type="button">Retake</button>
+          <label class="btn btn-secondary" for="file-upload">Upload Photo</label>
+          <input id="file-upload" type="file" accept="image/*" capture="environment" class="visually-hidden" />
+        </div>
+
+        <button id="btn-scan" class="btn btn-primary btn-block hidden" type="button">Scan This Plant</button>
+      </div>
+
+      <div id="scan-loading" class="loading hidden">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Analyzing photo…</p>
+      </div>
+
+      <div id="scan-error" class="alert alert-error hidden"></div>
+
+      <div id="scan-results" class="results hidden"></div>
+    </section>
+
+    <!-- DIAGNOSE TAB -->
+    <section id="tab-diagnose" class="tab-panel">
+      <h2>Manual Diagnosis</h2>
+      <p class="hint">Don't have (or trust) a photo scan? Pick your plant and check off what you're seeing for an accurate, rule-based diagnosis from our plant care database.</p>
+
+      <div class="field">
+        <label for="diagnose-plant-select">Plant (optional, improves accuracy)</label>
+        <select id="diagnose-plant-select">
+          <option value="">I'm not sure / general symptoms</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>What do you see?</label>
+        <div id="symptom-list" class="symptom-list"></div>
+      </div>
+
+      <button id="btn-diagnose" class="btn btn-primary" type="button">Diagnose</button>
+
+      <div id="diagnose-results" class="results hidden"></div>
+    </section>
+
+    <!-- BROWSE TAB -->
+    <section id="tab-browse" class="tab-panel">
+      <h2>Plant Care Guide</h2>
+      <input id="plant-search" class="search-input" type="search" placeholder="Search plants (e.g. pothos, monstera, succulent)…" />
+      <div id="plant-grid" class="plant-grid"></div>
+      <div id="plant-detail-overlay" class="overlay hidden">
+        <div class="overlay-card" id="plant-detail-card"></div>
+      </div>
+    </section>
+
+    <!-- HISTORY TAB -->
+    <section id="tab-history" class="tab-panel">
+      <h2>Scan History</h2>
+      <div id="history-list" class="history-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Identification &amp; health data via <a href="https://plant.id" target="_blank" rel="noopener">Plant.id</a> where configured. Care guidance compiled from general horticultural knowledge. Not a substitute for a local nursery or extension office for valuable or severely ill plants.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
