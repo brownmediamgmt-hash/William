@@ -50,9 +50,24 @@ data/plants.json     Curated plant care database (46 houseplants)
 public/              Frontend (vanilla HTML/CSS/JS, mobile-first, installable as a PWA)
 ```
 
-## Deploying
+## Deploying to Render (recommended, free)
 
-Works on any host that runs Node 22+: Render, Railway, Fly.io, a VPS, etc.
+This repo includes a `render.yaml` blueprint, so Render sets almost everything up automatically:
+
+1. Go to the [Render dashboard](https://dashboard.render.com) and sign in (or make a free account).
+2. Click **New +** → **Blueprint**.
+3. Connect your GitHub account if asked, then pick the **William** repo.
+4. Render reads `render.yaml` and shows you one service to create (`william-plant-scanner`). It will ask you to paste in a value for `PLANT_ID_API_KEY` — paste your key from plant.id here (or leave it blank for now and add it later in Settings → Environment).
+5. Click **Apply** / **Deploy Blueprint**.
+6. Wait a couple of minutes — Render gives you a live URL like `https://william-plant-scanner.onrender.com` when it's done.
+
+**Notes on the free plan:**
+- The free instance spins down after 15 minutes of no traffic and takes ~30-60 seconds to wake back up on the next visit — normal for free hosting, not a bug.
+- Scan history (SQLite) resets on redeploys on the free plan since it doesn't include persistent storage. The plant care database itself is unaffected since it ships with the code. Upgrade to a paid plan and add a persistent disk mounted at `data/` if you want history to survive redeploys.
+
+## Deploying elsewhere
+
+Works on any host that runs Node 22+: Railway, Fly.io, a VPS, etc.
 
 1. Push this repo to your host.
 2. Set `PLANT_ID_API_KEY` (optional but recommended) and `PORT` (host usually sets this) as environment variables.
