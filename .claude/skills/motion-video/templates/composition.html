@@ -1,0 +1,226 @@
+<!doctype html>
+<!--
+  Motion composition. Everything on screen is a pure function of time:
+  render.mjs calls window.__seek(t) once per frame and screenshots it.
+  Never use CSS transitions/animations, setTimeout or Date.now() here.
+
+  Edit only the SCENE block (and the <style> for component classes copied from
+  the site). One shape morphs through `states`; a cursor triggers each change.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>motion composition</title>
+<style>
+  /* Paste the site's own font link / @font-face and component CSS below. */
+  html, body { margin: 0; overflow: hidden; }
+  #frame { position: relative; overflow: hidden; }
+  #camera { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+  #shape { position: absolute; overflow: hidden; box-sizing: border-box; border-style: solid; }
+  .layer { position: absolute; left: 50%; top: 50%; box-sizing: border-box; will-change: filter, opacity; }
+  #cursor { position: absolute; left: 0; top: 0; pointer-events: none; }
+
+  /* ---- site component styles (copied from capture.json html/style) ---- */
+</style>
+<script>
+window.SCENE = {
+  width: 1440,
+  height: 1440,
+  fps: 30,
+  duration: 14,            // seconds. For a loop, make it a whole number of bars.
+  loop: true,              // last frame === first frame
+  bpm: 120,
+  beats: null,             // paste beats.json "beats" here to lock to a real song
+  background: '#0f1712',   // frame colour behind the shape (site's page bg)
+  font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  fill: 0.6,               // share of the frame the shape fills once the camera settles
+  maxZoom: 6,              // cap so tiny components (pills, chips) don't pixel-blow
+  cursorSize: 64,          // px in the output frame
+  // Each state: the SAME shape at a different size/radius/colour with new content.
+  //   beat    beat index at which this state starts (0 for the first)
+  //   w, h    shape size in site pixels (use the component's real box from capture.json)
+  //   radius, bg, color, borderColor, borderWidth
+  //   pad     inner padding of the content layer (px number or CSS string)
+  //   html    the site's real markup/copy for this state. Can read CSS vars
+  //           --p (0→1 over the state) and --drag (0→1 during a drag).
+  //   cursor  {x, y} fraction of the shape the cursor goes to during this state
+  //   action  'click' | 'hover' | 'drag' — how the cursor triggers the NEXT state
+  //   dragFrom {x, y} start of a drag (action: 'drag')
+  states: [
+    { beat: 0, w: 360, h: 88, radius: 44, bg: '#4f9a5c', color: '#0b1a0e', pad: 0,
+      html: `<div style="font:600 30px/88px var(--font);text-align:center">Get started</div>`,
+      cursor: { x: 0.5, y: 0.55 }, action: 'click' },
+    { beat: 4, w: 720, h: 460, radius: 22, bg: '#1a271e', color: '#eaf3ea', borderColor: '#2a3a2f', borderWidth: 1, pad: 40,
+      html: `<div style="font:700 44px var(--font)">Hello</div>`,
+      cursor: { x: 0.8, y: 0.85 }, action: 'click' },
+  ],
+};
+</script>
+</head>
+<body>
+<div id="frame">
+  <div id="camera">
+    <div id="shape"><div class="layer" id="layerA"></div><div class="layer" id="layerB"></div></div>
+  </div>
+  <svg id="cursor" viewBox="0 0 44 44"><path d="M6 4 L6 34 L14 27 L19.5 39 L25 36.5 L19.5 25 L30 25 Z" fill="#fff" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/></svg>
+</div>
+<script>
+(() => {
+  const S = Object.assign(window.SCENE, window.__SCENE_OVERRIDES || {}); // render.mjs --beats / --duration
+  const frame = document.getElementById('frame');
+  const camera = document.getElementById('camera');
+  const shape = document.getElementById('shape');
+  const cursor = document.getElementById('cursor');
+  const layers = [document.getElementById('layerA'), document.getElementById('layerB')];
+
+  frame.style.width = S.width + 'px';
+  frame.style.height = S.height + 'px';
+  document.body.style.background = S.background;
+  frame.style.background = S.background;
+  const cs = S.cursorSize || 64, ck = cs / 44; // cursor path is drawn on a 44px grid, tip at (6, 4)
+  cursor.style.width = cursor.style.height = cs + 'px';
+  cursor.style.transformOrigin = `${6 * ck}px ${4 * ck}px`;
+  document.documentElement.style.setProperty('--font', S.font);
+  shape.style.fontFamily = S.font;
+
+  const period = 60 / S.bpm;
+  const beatTime = (b) => (S.beats && S.beats[b] != null ? S.beats[b] : b * period);
+
+  // Timeline. For a loop, append a copy of state 0 that settles by the end.
+  const states = S.states.map((s) => ({ ...s, t: beatTime(s.beat) }));
+  states[0].t = 0;
+  if (S.loop) {
+    const backAt = Math.max(states[states.length - 1].t + period, S.duration - 2 * period);
+    states.push({ ...states[0], t: backAt, isLoopBack: true });
+  }
+
+  // ---------- maths ----------
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, p) => a + (b - a) * p;
+  const smooth = (e0, e1, x) => { const u = clamp((x - e0) / (e1 - e0)); return u * u * (3 - 2 * u); };
+  const easeInOut = (u) => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
+  // Closed-form damped spring, ~1% overshoot, settles in `settle` seconds.
+  function spring(t, settle = 0.55, zeta = 0.82) {
+    if (t <= 0) return 0;
+    if (t >= 2 * settle) return 1; // residual < 0.05%: snap so loops close exactly
+    const w0 = 4 / (zeta * settle);
+    const wd = w0 * Math.sqrt(1 - zeta * zeta);
+    return 1 - Math.exp(-zeta * w0 * t) * (Math.cos(wd * t) + (zeta * w0 / wd) * Math.sin(wd * t));
+  }
+  const colorCache = new Map();
+  const probe = document.createElement('div');
+  document.body.appendChild(probe);
+  function rgba(c) {
+    if (!c) return [0, 0, 0, 0];
+    if (colorCache.has(c)) return colorCache.get(c);
+    probe.style.color = ''; probe.style.color = c;
+    const m = getComputedStyle(probe).color.match(/[\d.]+/g).map(Number);
+    const v = [m[0], m[1], m[2], m[3] == null ? 1 : m[3]];
+    colorCache.set(c, v);
+    return v;
+  }
+  const mixColor = (a, b, p) => {
+    const A = rgba(a), B = rgba(b), q = clamp(p);
+    return `rgba(${lerp(A[0], B[0], q).toFixed(1)},${lerp(A[1], B[1], q).toFixed(1)},${lerp(A[2], B[2], q).toFixed(1)},${lerp(A[3], B[3], q).toFixed(3)})`;
+  };
+  const fit = (s) => Math.min((S.width * S.fill) / s.w, (S.height * S.fill) / s.h, S.maxZoom);
+  // Cursor point of state s, in frame pixels, with the state at rest.
+  const restPoint = (s) => {
+    const z = fit(s), c = s.cursor || { x: 0.5, y: 0.5 };
+    return { x: S.width / 2 + z * (c.x - 0.5) * s.w, y: S.height / 2 + z * (c.y - 0.5) * s.h };
+  };
+
+  const shown = [-1, -1];
+  function setLayer(i, idx, s, opacity, blur) {
+    const el = layers[i];
+    if (shown[i] !== idx) {
+      el.innerHTML = s.html || '';
+      shown[i] = idx;
+    }
+    el.style.width = s.w + 'px';
+    el.style.height = s.h + 'px';
+    el.style.padding = typeof s.pad === 'string' ? s.pad : (s.pad || 0) + 'px';
+    el.style.color = s.color || 'inherit';
+    el.style.marginLeft = -s.w / 2 + 'px';
+    el.style.marginTop = -s.h / 2 + 'px';
+    el.style.opacity = opacity;
+    el.style.filter = blur > 0.05 ? `blur(${blur.toFixed(2)}px)` : 'none';
+    el.style.visibility = opacity <= 0.001 ? 'hidden' : 'visible';
+  }
+
+  window.__seek = function (t) {
+    let k = 0;
+    while (k + 1 < states.length && states[k + 1].t <= t) k++;
+    const cur = states[k];
+    const prev = k > 0 ? states[k - 1] : cur;
+    const next = states[k + 1];
+    const nextT = next ? next.t : S.duration;
+    const lt = t - cur.t;
+    const span = nextT - cur.t;
+    const p = k > 0 ? spring(lt, Math.min(0.55, span / 2)) : 1;
+    const pc = k > 0 ? spring(lt, Math.min(0.8, span / 2)) : 1; // camera lags the shape a touch
+
+    // Shape
+    const w = lerp(prev.w, cur.w, p), h = lerp(prev.h, cur.h, p);
+    shape.style.width = w + 'px';
+    shape.style.height = h + 'px';
+    shape.style.left = -w / 2 + 'px';
+    shape.style.top = -h / 2 + 'px';
+    shape.style.borderRadius = Math.max(0, lerp(prev.radius || 0, cur.radius || 0, p)) + 'px';
+    shape.style.background = mixColor(prev.bg, cur.bg, p);
+    shape.style.borderWidth = lerp(prev.borderWidth || 0, cur.borderWidth || 0, clamp(p)) + 'px';
+    shape.style.borderColor = mixColor(prev.borderColor || prev.bg, cur.borderColor || cur.bg, p);
+
+    // Camera
+    // Lagging zoom, but never so far behind that the growing shape leaves the frame.
+    const z = Math.min(lerp(fit(prev), fit(cur), pc), 0.92 * Math.min(S.width / w, S.height / h));
+    camera.style.transform = `translate(${S.width / 2}px, ${S.height / 2}px) scale(${z})`;
+
+    // Content swap with a short blur
+    const out = k > 0 ? smooth(0, 0.16, lt) : 1;
+    const inn = k > 0 ? smooth(0.08, 0.28, lt) : 1;
+    const curIdx = cur.isLoopBack ? 0 : k;
+    const prevIdx = prev.isLoopBack ? 0 : k - 1;
+    const statePos = clamp(lt / Math.max(0.001, span));
+    if (k > 0 && out < 1) setLayer(0, prevIdx, prev, 1 - out, out * 10);
+    else setLayer(0, prevIdx, prev, 0, 0);
+    setLayer(1, curIdx, cur, inn, (1 - inn) * 10);
+
+    // Cursor: rests, travels to this state's target, then acts at the next beat.
+    let from = k > 0 ? restPoint(prev) : (S.loop ? restPoint(cur) : { x: restPoint(cur).x + 220, y: restPoint(cur).y + 260 });
+    const to = restPoint(cur);
+    const action = cur.action || 'click';
+    const moveStart = cur.t + (k > 0 ? 0.3 : 0.15);
+    const moveEnd = Math.max(moveStart + 0.2, nextT - 0.28);
+    let press = 0, drag = 0, u2;
+    if (action === 'drag' && cur.dragFrom) {
+      const dz = fit(cur);
+      const df = { x: S.width / 2 + dz * (cur.dragFrom.x - 0.5) * cur.w, y: S.height / 2 + dz * (cur.dragFrom.y - 0.5) * cur.h };
+      const mid = lerp(moveStart, moveEnd, 0.3);
+      if (t < mid) { const u = easeInOut(smooth(moveStart, mid, t)); from = { x: lerp(from.x, df.x, u), y: lerp(from.y, df.y, u) }; }
+      else from = df;
+      drag = easeInOut(smooth(mid + 0.12, moveEnd, t));
+      press = smooth(mid, mid + 0.1, t) * (1 - smooth(moveEnd, moveEnd + 0.1, t));
+      u2 = drag;
+    } else {
+      u2 = easeInOut(smooth(moveStart, moveEnd, t));
+      if (next && action === 'click') press = smooth(nextT - 0.14, nextT - 0.06, t);
+    }
+    // Release the click in the first instants of the new state.
+    if (k > 0 && (prev.action || 'click') === 'click') press = Math.max(press, 1 - smooth(0.0, 0.12, lt));
+    if (k === 0 && S.loop) press = 0;
+    const cx = lerp(from.x, to.x, u2), cy = lerp(from.y, to.y, u2);
+    cursor.style.transform = `translate(${cx - 6 * ck}px, ${cy - 4 * ck}px) scale(${1 - 0.14 * press})`;
+
+    layers[1].style.setProperty('--p', statePos.toFixed(4));
+    layers[1].style.setProperty('--drag', drag.toFixed(4));
+    layers[1].style.setProperty('--t', lt.toFixed(3));
+    layers[0].style.setProperty('--p', '1');
+    layers[0].style.setProperty('--drag', '1');
+  };
+
+  window.__ready = document.fonts.ready.then(() => { window.__seek(0); return true; });
+})();
+</script>
+</body>
+</html>
