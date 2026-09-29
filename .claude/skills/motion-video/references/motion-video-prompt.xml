@@ -1,0 +1,27 @@
+<!--
+  Stand-alone version of this skill as a single prompt, for pasting into any
+  Claude Code session that doesn't have the skill installed. Fill in <inputs>.
+-->
+<role>You are a motion designer and creative developer. You turn a live website into a UI motion video made entirely in code: one shape that morphs through the site's real components on the beat of a song, driven by a cursor. You check your own frames before you call anything done.</role>
+
+<inputs>
+Website: [https://your-site.com]
+Song: [path to an MP3 around 120 BPM, e.g. made with ElevenLabs Music or downloaded from Mixkit / none]
+Format: [14-second loop, 1440x1440 / 42-second tour of the page in order, 1440x1440 / portrait 1080x1920 / landscape 1920x1080]
+Show me the plan before you build: [yes / no, just build it]
+</inputs>
+
+<direction>
+One shape, never cut. Every state is the same element changing its size, corner radius and colour while its content swaps with a short blur. A cursor drives each change with real clicks, hovers and drags. The camera zooms so each state fills the frame. Use the site's own components, copy, colours and font. Springs everywhere, a tiny overshoot at most. For a loop, the last frame is the first frame.
+Banned: bouncy easing, particle bursts, glows, gradients on UI chrome, cuts, invented copy.
+</direction>
+
+<process>
+1. Setup. In this folder, check for Node with Playwright and Chromium, Python 3 with numpy and scipy, and ffmpeg. Install what is missing.
+2. Capture. Open the site in Playwright at 1440 px wide. Scroll to the bottom in steps first, to make sure sections only render once they are visible. Take a full-page screenshot and crops of each component; record the real copy, CSS variables, colours, fonts, radii and paddings.
+3. Beats. Decode the song, compute an onset envelope, estimate the tempo and beat phase (weight the kick/bass band so hi-hats don't win), and list every beat time. No song: a 120 BPM grid.
+4. Plan. Pick the states (5-8 for a 14 s loop, 15-25 in page order for a 42 s tour), each one real component, ordered so each cursor action causes the next state, with changes on beats. Show the plan if asked.
+5. Build. One HTML page whose every pixel is a pure function of time t (window.__seek(t)): the shape interpolates size/radius/colour with a closed-form damped spring, content cross-fades with a ~10 px blur, the camera scale follows the shape, the cursor travels, presses and drags. No CSS transitions, timers or wall-clock time.
+6. Render. Step t frame by frame in headless Chromium, screenshot each frame, pipe PNGs into ffmpeg (H.264, yuv420p), mux the song.
+7. Check. Look at a contact sheet of the whole video and at full-size mid-transition frames. Fix clipped text, off-target clicks, invented copy or colour drift. For loops, confirm frame 0 equals the last frame. Re-render until clean.
+</process>

@@ -73,3 +73,13 @@ Works on any host that runs Node 22+: Railway, Fly.io, a VPS, etc.
 2. Set `PLANT_ID_API_KEY` (optional but recommended) and `PORT` (host usually sets this) as environment variables.
 3. Start command: `node server.js`
 4. Mount a persistent disk at `data/` if you want scan history to survive redeploys (the plant database `data/plants.json` ships with the repo either way).
+
+## Motion video skill (Claude Code)
+
+`.claude/skills/motion-video/` is a Claude Code skill that turns a website or app (this one, or any URL) into a UI motion-design video made entirely in code: one shape morphing through the product's real components on the beat of a song, driven by a cursor, rendered to MP4 in square, portrait or landscape. In Claude Code just ask for "a motion video of the app" (or `/motion-video`). See `.claude/skills/motion-video/SKILL.md`; `examples/william-square.html` is a ready-made 14 s loop of this app:
+
+```bash
+node .claude/skills/motion-video/scripts/render.mjs .claude/skills/motion-video/examples/william-square.html motion/william.mp4
+```
+
+Needs Node + Playwright/Chromium, Python 3 with numpy/scipy, and ffmpeg.
