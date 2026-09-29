@@ -253,11 +253,17 @@ window.SCENE = {
     layers[1].style.setProperty('--p', statePos.toFixed(4));
     layers[1].style.setProperty('--drag', drag.toFixed(4));
     layers[1].style.setProperty('--t', lt.toFixed(3));
+    // Global clock for ambient details (blinking dots, tickers) that must match at the loop seam.
+    const tt = S.loop ? t % S.duration : t;
+    for (const el of layers) el.style.setProperty('--time', tt.toFixed(3));
     layers[0].style.setProperty('--p', '1');
     layers[0].style.setProperty('--drag', '1');
   };
 
-  window.__ready = document.fonts.ready.then(() => { window.__seek(0); return true; });
+  // Load every declared face up front: a state that first appears mid-render must not flash a fallback font.
+  window.__ready = Promise.all([...document.fonts].map((f) => f.load().catch(() => null)))
+    .then(() => document.fonts.ready)
+    .then(() => { window.__seek(0); return true; });
 })();
 </script>
 </body>

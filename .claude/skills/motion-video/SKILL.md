@@ -89,7 +89,7 @@ Each state:
 ```
 
 - `w`/`h` = the component's real size from `capture.json` (the camera zooms, so don't pre-scale).
-- Inside `html`, CSS vars `--p` (0→1 across the state), `--drag` (0→1 during a drag) and `--t` (seconds) drive in-state motion: typing, progress bars, sliders, counters. See the `typed()` helper in `examples/william-square.html` for per-letter typing in the site's font.
+- Inside `html`, CSS vars `--p` (0→1 across the state), `--drag` (0→1 during a drag), `--t` (seconds into the state) and `--time` (global seconds, wraps at the loop — use it for blinking dots or tickers so the seam stays exact) drive in-state motion: typing, progress bars, sliders, counters. See the `typed()` helper in `examples/william-square.html` for per-letter typing in the site's font.
 - With `loop: true` the engine appends a return to state 0 and settles it by the last frame, so **the last frame is the first frame**.
 - Everything is a pure function of time. No CSS transitions/animations, timers, `Date.now()` or video elements.
 
