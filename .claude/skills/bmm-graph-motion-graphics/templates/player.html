@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMM Motion Player</title>
+<style>
+  @font-face { font-family: 'Anton'; src: url('../assets/fonts/Anton-Regular.woff2') format('woff2'); }
+  @font-face { font-family: 'Caveat'; src: url('../assets/fonts/Caveat.woff2') format('woff2'); font-weight: 400 700; }
+  html, body { margin: 0; background: #0b0c10; color: #ccc; font: 14px system-ui, sans-serif; }
+  body.render canvas { width: auto; height: auto; }
+  #wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 12px; }
+  canvas { width: min(92vw, calc((100vh - 90px) * 0.5625)); height: auto; background: #000; }
+  #ui { display: flex; gap: 10px; align-items: center; width: min(92vw, 540px); }
+  #scrub { flex: 1; }
+  button { background: #2E7CF6; color: #fff; border: 0; border-radius: 6px; padding: 6px 14px; font-weight: 600; cursor: pointer; }
+  body.render #ui { display: none; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c"></canvas>
+  <div id="ui"><button id="play">▶︎</button><input id="scrub" type="range" min="0" max="1000" value="0"><span id="tc">0.00s</span></div>
+</div>
+<script src="../engine/bmm-motion.js"></script>
+<script>
+  // load the storyboard named in ?project=  (default: the Dutch 30s reel)
+  const qs = new URLSearchParams(location.search);
+  const projectFile = qs.get('project') || 'bmm-reel-nl-30s.js';
+  if (qs.get('render')) document.body.classList.add('render');
+  // fonts must be loaded BEFORE the storyboard runs: layouts are measured at load time
+  window.__ready = new Promise(async (resolve) => {
+    await document.fonts.load('100px "Anton"'); await document.fonts.load('700 100px "Caveat"'); await document.fonts.ready;
+    const s = document.createElement('script'); s.src = projectFile; document.body.appendChild(s);
+    s.onload = async () => {
+      const P = window.BMM_PROJECT; BMM.setSize(P.width, P.height);
+      const cv = document.getElementById('c'); cv.width = P.width; cv.height = P.height;
+      const ctx = cv.getContext('2d');
+      const frames = Math.round(P.duration * P.fps);
+      window.__info = () => ({ frames, fps: P.fps, width: P.width, height: P.height, duration: P.duration, cues: P.cues });
+      window.__frame = (f, samples, q) => { BMM.renderFrame(ctx, P, f, { samples }); return cv.toDataURL('image/jpeg', q || 0.95).split(',')[1]; };
+      window.__png = (f, samples) => { BMM.renderFrame(ctx, P, f, { samples }); return cv.toDataURL('image/png').split(',')[1]; };
+      window.__audio = async () => {
+        if (!P.audio) return null;
+        const sr = 48000, oac = new OfflineAudioContext(2, Math.ceil(sr * P.duration), sr);
+        P.audio(oac);
+        const buf = await oac.startRendering();
+        return wavB64(buf);
+      };
+      // live preview (draws with 2 blur samples for speed)
+      let playing = false, start = 0, cur = 0;
+      const scrub = document.getElementById('scrub'), tc = document.getElementById('tc');
+      const show = (t) => { const f = Math.min(frames - 1, Math.round(t * P.fps)); BMM.renderFrame(ctx, P, f, { samples: 2 }); tc.textContent = t.toFixed(2) + 's'; scrub.value = (t / P.duration) * 1000; };
+      const loop = (now) => { if (!playing) return; cur = ((now - start) / 1000) % P.duration; show(cur); requestAnimationFrame(loop); };
+      document.getElementById('play').onclick = () => { playing = !playing; if (playing) { start = performance.now() - cur * 1000; requestAnimationFrame(loop); } };
+      scrub.oninput = () => { playing = false; cur = (scrub.value / 1000) * P.duration; show(cur); };
+      show(0);
+      resolve(true);
+    };
+  });
+  function wavB64(buf) {
+    const ch = buf.numberOfChannels, len = buf.length, sr = buf.sampleRate;
+    const data = new DataView(new ArrayBuffer(44 + len * ch * 2));
+    const w = (o, s) => [...s].forEach((c, i) => data.setUint8(o + i, c.charCodeAt(0)));
+    w(0, 'RIFF'); data.setUint32(4, 36 + len * ch * 2, true); w(8, 'WAVE'); w(12, 'fmt ');
+    data.setUint32(16, 16, true); data.setUint16(20, 1, true); data.setUint16(22, ch, true); data.setUint32(24, sr, true);
+    data.setUint32(28, sr * ch * 2, true); data.setUint16(32, ch * 2, true); data.setUint16(34, 16, true); w(36, 'data'); data.setUint32(40, len * ch * 2, true);
+    const chans = [...Array(ch)].map((_, i) => buf.getChannelData(i));
+    let o = 44;
+    for (let i = 0; i < len; i++) for (let c = 0; c < ch; c++) { const v = Math.max(-1, Math.min(1, chans[c][i])); data.setInt16(o, v < 0 ? v * 0x8000 : v * 0x7fff, true); o += 2; }
+    const bytes = new Uint8Array(data.buffer); let bin = '';
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(bin);
+  }
+</script>
+</body>
+</html>
